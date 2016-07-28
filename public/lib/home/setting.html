@@ -1,0 +1,20 @@
+<div class="product_desc languages">
+    <div class="title_tabs">
+        <div class="detail col_6 pull_left">
+            <strong>English(EN)</strong><i class="arrow_down"></i>
+            <select class="field_hide">
+                {% for item in languages %}
+                <option value="{{item.value}}">{{item.text}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="chart col_6 pull_right">
+            <strong>USD US$</strong><i class="arrow_down"></i>
+            <select class="field_hide">
+                {% for item in currencys %}
+                <option value="{{item.value}}">{{item.text}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+</div>

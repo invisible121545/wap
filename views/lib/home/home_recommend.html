@@ -1,0 +1,21 @@
+<div class="home_recommend">
+    <div class="recommend_nav_wrap">
+        <div class="recommend_nav">
+            <ul>
+                {% for item in home.homeRecNav %}
+                <li data_view="{{item}}" class="{% if loop.first %}active{% endif %}">{{item}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="collection_view">
+        <ul data_target="Recommend">
+          {% for item in home.productList %}
+              {% include "../common/product_item.html" %}
+          {% endfor %}
+        </ul>
+    </div>
+    <div class="more">
+        <big class="btn_plain">VIEW MORE</big>
+    </div>
+</div>

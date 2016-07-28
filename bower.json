@@ -1,0 +1,21 @@
+{
+  "name": "yoins",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "xuzhaohui <xuzhaohui@banggood.cn>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Swiper": "swiper#^3.3.1",
+    "inobounce": "^0.1.2"
+  }
+}

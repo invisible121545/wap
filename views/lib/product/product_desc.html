@@ -1,0 +1,26 @@
+<div class="product_desc">
+    {% if pro.productDesc.sizeChart %}
+    <div class="title_tabs clearfix">
+        <a class="detail col_6 pull_left active">
+            <strong>Product Detail</strong>
+            <i class="arrow_down"></i>
+        </a>
+        <a class="chart col_6 pull_right">
+            <strong>Size Chart</strong>
+            <i class="arrow_down"></i>
+        </a>
+    </div>
+    {% endif %}
+    <div class="desc_content_wrap">
+        {% if pro.productDesc.detail %}
+        <div class="detail_content">
+           {{pro.productDesc.detail}}
+        </div>
+        {% endif %}
+        {% if pro.productDesc.sizeChart %}
+        <div class="detail_content">
+            {{pro.productDesc.sizeChart}}
+        </div>
+        {% endif %}
+    </div>
+</div>

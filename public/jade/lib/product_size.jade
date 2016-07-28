@@ -1,0 +1,89 @@
+//- .product_sizes
+	.color
+		dl
+			dt Color:
+			dd
+				select.sele_box
+					option(value="") Select Color
+					option(value="Rose") Rose
+					option(value="Rose") Rose
+					option(value="Rose") Rose
+					option(value="Rose") Rose
+				i.arrow_down.absolute_right
+					//- span.arrow_down
+	.size
+		select.sele_box
+			option(value="") Select Size
+			option(value="Rose") XL
+		i.arrow_down.absolute_right
+			//- span.arrow_down
+	.qty
+		dl
+			dt QTY:
+			dd
+				span.unavailable
+					i.icon_sm.icon_sm_minus
+				input(type="number" value="1")
+				span
+					i.icon_sm.icon_sm_plus
+.product_size
+	dl.dl_color
+		dt COLOR:
+		dd
+			.select_box
+				select.field_default.color
+					option(value="") COLOR
+					option(value="1") SIZE
+					option(value="1") SIZE
+					option(value="1") SIZE
+					option(value="1") SIZE
+					option(value="1") SIZE
+				i.arrow_down.absolute_right
+	dl.dl_size
+		dt SIZE:
+		dd
+			.select_box
+				select.field_default.color
+					option(value="") SIZE
+					option(value="1") SIZE
+					option(value="1") SIZE
+					option(value="1") SIZE
+					option(value="1") SIZE
+				i.arrow_down.absolute_right
+	dl.dl_qty
+		dt QTY:
+		dd
+			span.unavailable
+				i.icon.icon_minus
+			input(type="number" value="1")
+			span
+				i.icon.icon_plus
+.product_option
+	//- p
+		| Add To Cart &#38; Save More 
+		span.color_theme 20%
+	.op_btns.clearfixed
+		a.btn_lg.btn_theme.btn_block.add_bag_btn
+			//- i.icon_loading
+			| ADD TO BAG
+		//-a.btn.btn_black_solid.btn_buy_now.col_6 Buy It Now
+		a.btn_lg.btn_light.btn_block.add_wish_btn
+			//- i.icon_loading
+			//- span.icon.icon_wish_gray
+			| ADD TO WISH
+	.op_share
+		dl.clearfix
+			dt Share :
+			dd
+				ul
+					li.i_fb
+						a(href="")
+					li.i_tw
+						a(href="")
+					li.i_pt
+						a(href="")
+					li.i_tb
+						a(href="")
+					//- li.i_pv
+						a(href="")
+

@@ -1,0 +1,6 @@
+.swiper-container.home_swipe
+	.swiper-wrapper
+		- for (var i=1;i<4;i++)
+			.swiper-slide
+				img.swiper-lazy(data-src="./images/slide0#{i}.jpg")
+	.swiper-pagination

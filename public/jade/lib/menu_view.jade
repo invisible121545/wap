@@ -1,0 +1,76 @@
+.menu_view.fixed_top
+	.search_box.clearfix
+		form.from
+			input.field_default(type="text" placeholder="Search Newchics ..." name="keywords" dvalue="Search")
+			.label_search_right
+				input.icon.icon_search.absolute_center(type="submit" value="")
+		//- .list_group
+			- for (var j = 0; j < 20; j++)
+					a.list_group_item Hoodies &#38; Sweatshirt
+	.cate_view_modal
+	//- .sub_menu_box.clearfix
+		.sub_cate_box.col_5.pull_left
+			ul
+				li
+					.cate_top
+						//- i.icon.icon_person
+						a(herf="javascript:;") Home &#38; Garden
+				li.active
+					.cate_top
+						//- i.icon.icon_person
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						//- i.icon.icon_person
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						//- i.icon.icon_person
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						a(herf="javascript:;") Dress
+				li
+					.cate_top
+						a(herf="javascript:;") Dress
+		.sub_menu_items.col_7.pull_right
+			.list_group.border_less.sub_menu_group
+				- for (var j = 0; j < 9; j++)
+					a.list_group_item Hoodies &#38; Sweatshirt
+	.bot_menu.clearfix
+		a
+			span.i_cate1
+			strong New In
+		a
+			span.i_cate2
+			strong Pre Order
+		a
+			span.i_cate3
+			strong Only Yoins
+		a
+			span.i_cate4
+			strong Look
+	.list_group.category_list
+		- for (var j = 0; j < 3; j++)
+				.list_group_item
+					.group_top
+						strong Hoodies &#38; Sweatshirt
+						i.icon.icon_chevron.absolute_right
+					ul.list_group.inner_group
+						- for (var i = 0; i < 3; i++)
+							li.list_group_item
+								a(href="")
+									strong Hoodies &#38; Sweatshirt
+									i.icon.icon_chevron.rotate_right.absolute_right

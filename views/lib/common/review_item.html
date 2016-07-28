@@ -1,0 +1,27 @@
+<div class="review_row">
+    <div class="row_top">
+        <span class="circle avator">
+            <img src="{{item.avator}}">
+        </span>
+        <div class="text">
+            <strong>{{item.customerName}}</strong>
+            <span><i style="width: {{item.reviewPercent}}%;"></i></span>
+        </div>
+        <span class="date">{{item.date}}</span>
+    </div>
+    <div class="row_content">
+        <h4>{{item.title}}</h4>
+        <p>{{item.text}}</p>
+    </div>
+    <div class="helpful_txt">
+        {% if item.sizeInfo %}
+        <div class="size_info">Normally worn size : {{item.sizeInfo}} as expected</div>
+        {% endif %}
+        <a href="" class="yes active">
+            <i class="icon icon_thumb_gray"></i>(<em>{{item.helpful}}</em>)
+        </a>
+        <a href="" class="no">
+            <i class="icon icon_thumb_down_gray"></i>(<em>{{item.unhelpful}}</em>)
+        </a>
+    </div>
+</div>

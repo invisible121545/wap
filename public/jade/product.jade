@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	.container.product_container
+		include ./lib/head
+		.main
+			include lib/breadcrumb
+			include lib/product_swipe
+			include lib/product_text
+			include lib/product_size
+			include lib/product_desc
+			include lib/product_review
+			include lib/product_similar
+			include lib/product_language
+		include ./lib/foot

@@ -1,0 +1,21 @@
+@for $i from 1 through $col_count {
+    .col_#{$i} {width: $s/$col_count*$i;}
+    .offset_#{$i} {margin-left: $s/$col_count*$i;}
+}
+
+
+.icon{@include set_icon($size_md);background-image: url(../images/header_icon.png);}
+.icon_sm{@include set_icon($size_sm);background-image: url(../images/header_icon.png);}
+$head_icons:(menu,0),(person,1),(wish,3),(bag,2),(bag_white,2),(search,4),(back,5),(to_top,5),(wish_empty,8),(wish_theme,9),(wish_gray,17),(chevron,16),(review,10),(minus,18),(plus,19),(thumb,20),(thumb_gray,21),(thumb_down,22),(thumb_down_gray,23);
+@each $head_class,$index in $head_icons{
+    .icon_#{$head_class}{
+        background-position: 0 $size_md*$index*-1;
+    }
+    .icon_sm_#{$head_class}{
+        background-position: 0 $size_sm*$index*-1;
+    }
+}
+
+.main{
+	padding-top: $size_lg;
+}

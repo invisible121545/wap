@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	.container.sign_container
+		include ./lib/head
+		.main.sign_main
+			.sign_srap
+				.segment_box
+					.segment
+						a.segment_item SIGN IN
+						a.segment_item SIGN UP
+				.login_section
+					form.form(action="/users/signin" method="POST")
+						ul.list_group.form_group
+							li.list_group_item
+								span.tip Email
+								input.field_plain(type="email" name="email" data_field="email" placeholder="Newchic@yahoo.com" value="xuzhh@qq.com")
+							li.list_group_item
+								span.tip Password
+								input.field_plain(type="password" name="password" data_field="password" placeholder="Password" value="121545")
+						input.btn.btn_block.btn_theme_solid(type="submit" value="LOGIN")
+					.forget_psw.text_right.clearfix
+						span
+							i 15% 
+							| Off Your First Order
+						a Forgot Password?
+					a.btn.btn_block.btn_default.btn_facebook <i></i> Sign up with Facebook
+					a.btn.btn_block.btn_default.btn_facebook <i></i> Sign up with Google

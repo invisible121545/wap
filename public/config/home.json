@@ -1,0 +1,19 @@
+{
+	"head_conf": [{
+		"href": "javascript:;",
+		"class": "nav_item_1",
+		"icon": "menu"
+	}, {
+		"href": "person.html",
+		"class": "nav_item_2",
+		"icon": "person"
+	}, {
+		"href": "wish.html",
+		"class": "nav_item_3",
+		"icon": "wish"
+	}, {
+		"href": "bag.html",
+		"class": "nav_item_4",
+		"icon": "bag"
+	}]
+}

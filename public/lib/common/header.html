@@ -1,0 +1,17 @@
+<header class="header">
+    <nav>
+    {% for item in conf.navItem %}
+		<a href="{{item.href}}" class="nav_item nav_{{item.class}}">
+			{% if item.class === 'item_right' %}
+			{{item.text}}
+			{% else %}
+			<span class="icon icon_{{item.icon}}">
+			{% if item.icon === 'bag' %}<small>99</small>{% endif %}
+			</span>
+			{% endif %}
+		</a>
+    {% endfor %}
+    {% if conf.hasLogo %}<a href="/" class="logo"></a>{% endif %}
+    {% if conf.title %}<a href="javascript:;" class="title">{{conf.title}}</a>{% endif %}
+    </nav>
+</header>

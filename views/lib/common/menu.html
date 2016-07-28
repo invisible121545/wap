@@ -1,0 +1,97 @@
+<div class="menu_view">
+    <div class="search_box clearfix">
+        <form class="from">
+            <input type="text" placeholder="Shopping for ..." name="keywords" dvalue="Search" class="field_default">
+            <div class="label_search_right">
+                <input type="submit" value="" class="icon icon_search absolute_center">
+            </div>
+        </form>
+        <div class="search_list_wrap">
+            <div class="search_list">
+                <h4>HOT</h4>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+            </div>
+            <div class="search_list">
+                <h4>HISTORY <i class="icon_sm icon_sm_remove absolute_right"></i></h4>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+                <a href="">Dresses</a>
+            </div>
+        </div>
+    </div>
+    <div class="category_container">
+        <div class="bot_menu clearfix">
+        {% for item in context.menuRecommend %}
+            <a href="{{item.href}}">
+                <span class="i_cate{{loop.index}}"></span>
+                <strong>{{item.text}}</strong>
+            </a>
+        {% endfor %}
+        </div>
+        <div class="list_group category_list">
+            <ul class="list_group inner_group">
+                <li class="list_group_item">
+                    <a href="href">
+                        <strong>All Categorys</strong>
+                        <i class="icon icon_chevron rotate_right absolute_right"></i>
+                    </a>
+                </li>
+            </ul>
+        {% for item in context.categorys %}
+            <div class="list_group_item">
+                <div class="group_top">
+                    <strong>{{item.text}}</strong>
+                    <i class="icon icon_chevron absolute_right"></i>
+                </div>
+                <ul class="list_group inner_group">
+                    <li class="list_group_item">
+                        <a href="{{item.href}}">
+                            <strong>All {{item.text}}</strong>
+                            <i class="icon icon_chevron rotate_right absolute_right"></i>
+                        </a>
+                    </li>
+                {% for subItem in item.subCategory %}
+                    <li class="list_group_item">
+                        {% if subItem.subCategory %}
+                            <div class="group_top">
+                                <strong>{{subItem.text}}</strong>
+                                <i class="icon icon_chevron absolute_right"></i>
+                            </div>
+                            <ul class="list_group inner_group">
+                                <li class="list_group_item">
+                                    <a href="{{subItem.href}}">
+                                        <strong>All {{subItem.text}}</strong>
+                                        <i class="icon icon_chevron rotate_right absolute_right"></i>
+                                    </a>
+                                </li>
+                                {% for childItem in subItem.subCategory %}
+                                <li class="list_group_item">
+                                    <a href="{{childItem.href}}">
+                                        <strong>{{childItem.text}}</strong>
+                                        <i class="icon icon_chevron rotate_right absolute_right"></i>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <a href="{{subItem.href}}">
+                                <strong>{{subItem.text}}</strong>
+                                <i class="icon icon_chevron rotate_right absolute_right"></i>
+                            </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	.container.home_container
+		include ./lib/head
+		include ./lib/menu_view
+		.main
+			include ./lib/home_swipe
+			include ./lib/home_banner
+			include ./lib/home_recommend
+			include lib/product_language
+		include ./lib/foot

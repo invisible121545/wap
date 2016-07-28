@@ -1,0 +1,51 @@
+
+@mixin set_transition($dt: 0.45s){
+    transition: all $dt cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    -moz-transition: all $dt cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    -webkit-transition: all $dt cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    -o-transition: all $dt cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+@mixin transform($x,$y){
+    -webkit-transform: translate($x,$y);
+    -ms-transform: translate($x,$y);
+    transform: translate($x,$y);
+}
+
+@mixin set_icon($i_size){
+    width: $i_size;
+    height: $i_size;
+    background-size: $i_size;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+}
+
+@mixin set_tranform($fn){
+    transform: $fn;
+    -ms-transform: $fn;
+    -webkit-transform: $fn;
+    -o-transform: $fn;
+    -moz-transform: $fn;
+}
+
+@mixin set_fixed($mode){
+    position: fixed;
+    margin: auto;
+    z-index: 120;
+    @if $mode == top{
+        left: 0;right: 0;top: 0;
+    }@else if $mode == bottom{
+        left: 0;right: 0;bottom: 0;
+    }@else if $mode == left{
+        left: 0;top: 0;bottom: 0;
+    }@else if $mode == right{
+        right: 0;top: 0;bottom: 0;
+    }@else if $mode == center{
+        right: 0;top: 0;bottom: 0;left: 0;
+    }@else if $mode == cover{
+        right: 0;top: 0;bottom: 0;left: 0;
+    }
+}
+
+

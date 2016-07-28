@@ -1,0 +1,22 @@
+<div class="product_desc languages">
+    <div class="title_tabs">
+        <div class="detail col_6 pull_left">
+            <strong>{{context.commonLanguage.current}}</strong>
+            <i class="arrow_down"></i>
+            <select class="field_hide">
+                {% for item in context.commonLanguage.languages %}
+                <option value="{{item.value}}" selected="{% if item.text === context.commonLanguage.current %}{{selected}}{% endif %}">{{item.text}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="chart col_6 pull_right">
+            <strong>{{context.commonCurrency.current}}</strong>
+            <i class="arrow_down"></i>
+            <select class="field_hide">
+                {% for item in context.commonCurrency.currencys %}
+                <option value="{{item.value}}" selected="{% if item.text === context.commonCurrency.current %}{{selected}}{% endif %}">{{item.text}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+</div>

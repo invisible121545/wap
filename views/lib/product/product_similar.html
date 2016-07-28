@@ -1,0 +1,12 @@
+<div class="product_similar">
+    <div class="section border_bottom">
+        <h3>Similar Product</h3>
+    </div>
+    <div class="collection_view">
+        <ul>
+            {% for item in pro.productSimilar %}
+            {% include "../common/product_item.html" %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="container home_container">
+		{% include "./lib/common/header.html" %}
+		{% include "./lib/common/menu.html" %}
+		<div class="main">
+			{% include "./lib/home/home_swipe.html" %}
+			{% include "./lib/home/home_banner.html" %}
+			{% include "./lib/home/home_recommend.html" %}
+			{% include "./lib/common/setting.html" %}
+		</div>
+		{% include "./lib/common/backtop.html" %}
+		{% include "./lib/common/foot.html" %}
+	</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+<div class="home_recommend">
+    <div class="recommend_nav_wrap">
+        <div class="recommend_nav">
+            <ul>
+                {% for item in cateNav %}<li data_view="{{item.category}}">{{item.category}}</li>{% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="collection_view">
+        <ul data_target="cate_Recommend">
+          {% for item in productList %}
+              <li class="col_4">
+                <a href="{{item.href}}">
+                    <div class="img_box">
+                      <img data-original="{{item.img}}" src="../images/grey.gif" class="img_responsive lazy" />
+                    </div>
+                    <div class="item_text">
+                        <strike>{{item.oldPrice}}</strike>
+                        <strong>{{item.currentPrice}}</strong>
+                    </div>
+                    <span class="discount_label">{{item.discount}}</span>
+                </a>
+                <span class="absolute_right wish_label">
+                  <i class="icon icon_wish_empty"></i>
+                  <small>{{item.wishCount}}</small>
+                </span>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+    <div class="more">
+        <big class="btn_plain">VIEW MORE</big>
+    </div>
+</div>

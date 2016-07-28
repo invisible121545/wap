@@ -1,0 +1,59 @@
+.sign_container{
+	.sign_main{
+		position: relative;
+	}
+}
+
+.sign_wrap{
+	padding: 1.0rem;
+}
+
+.sign_form{
+	margin: 1.0rem 0;
+	.list_group_item{
+		border-bottom: none;
+		padding: .5rem 0;
+		.field_default{
+			line-height: $size_lg;
+			height: $size_lg;
+			background-color: $white;
+		}
+	}
+}
+
+.center_block{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.segment_box{
+	.segment{
+		@extend .clearfix;
+		width: 100%;
+		.segment_item{
+			border-radius: 3px;
+			border: 1px solid $black;
+			margin-left: -1px;
+			line-height: $size_md;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding: 0 .5rem;
+			text-align: center;
+			float: left;
+			&:first-child{
+				margin-left: 0;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			&:last-child{
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+		.segment_item.active{
+			color: #fff;
+			background-color: $black;
+		}
+	}
+}

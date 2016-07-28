@@ -1,0 +1,10 @@
+<div class="product_swipe_wrap">
+    <div class="swiper-container product_swipe">
+        <ul class="swiper-wrapper">
+        	{% for item in pro.productSwipe %}
+				<li class="swiper-slide"><img data-src="{{item.img}}" class="swiper-lazy"></li>
+        	{% endfor %}
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="product_review">
+    <div class="review_title">
+        <h3>REVIEWS</h3>
+        <a href="{{pro.productReview.href}}" class="icon icon_review absolute_right"></a>
+    </div>
+    <div class="review_wrap">
+        {% for item in pro.productReview.reviewList %}
+            {% include "../common/review_item.html" %}
+        {% endfor %}
+    </div>
+    <div class="view_more">
+        <a class="btn_plain">VIEW MORE</a>
+    </div>
+</div>

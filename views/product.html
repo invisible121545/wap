@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="container product_container">
+		{% include "./lib/common/header.html" %}
+		{% include "./lib/common/menu.html" %}
+		<div class="main product_main">
+			{% include "./lib/product/product_swipe.html" %}
+			{% include "./lib/product/product_info.html" %}
+			{% include "./lib/product/product_size.html" %}
+			{% include "./lib/product/product_review.html" %}
+			{% include "./lib/product/product_similar.html" %}
+			{% include "./lib/common/setting.html" %}
+		</div>
+		{% include "./lib/common/foot.html" %}
+	</div>
+{% endblock %}

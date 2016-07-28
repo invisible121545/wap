@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container sign_container">
+    {% include "./lib/common/header.html" %}
+    <div class="main sign_main">
+        <div class="sign_wrap">
+            <div class="segment_box">
+                <div class="segment"><a class="segment_item col_6">SIGN IN</a><a class="segment_item col_6 active">SIGN UP</a></div>
+            </div>
+            <div class="sign_section login_section">
+                <form action="/users/signin" method="POST" class="form">
+                    <ul class="list_group sign_form">
+                        <li class="list_group_item">
+                            {# <span class="tip">Email</span> #}
+                            <input type="email" name="email" data_field="email" placeholder="Newchic@yahoo.com" value="xuzhh@qq.com" class="field_default center_block">
+                        </li>
+                        <li class="list_group_item">
+                            {# <span class="tip">Password</span> #}
+                            <input type="password" name="password" data_field="password" placeholder="Password" value="121545" class="field_default center_block">
+                        </li>
+                    </ul>
+                    <input type="submit" value="LOGIN" class="btn btn_block btn_theme_solid">
+                </form>
+                <div class="forget_psw text_right clearfix"><span><i>15% </i>Off Your First Order</span><a>Forgot Password?</a></div><a class="btn btn_block btn_default btn_facebook"><i></i> Sign up with Facebook</a><a class="btn btn_block btn_default btn_facebook"><i></i> Sign up with Google</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

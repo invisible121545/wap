@@ -1,0 +1,16 @@
+<li class="col_4">
+    <a href="/product/{{item.productId}}">
+        <div class="img_box">
+            <img data-original="{{item.img}}" src="../images/grey.gif" class="img_responsive lazy" />
+        </div>
+        <div class="item_text">
+            <strike>US&#36;{{item.oldPrice}}</strike>
+            <strong>US&#36;{{item.currentPrice}}</strong>
+        </div>
+        <span class="discount_label">{{item.discount}}%OFF</span>
+    </a>
+    <span class="absolute_right wish_label">
+      <i class="icon icon_wish_empty"></i>
+      <small>{{item.wishCount}}</small>
+    </span>
+</li>

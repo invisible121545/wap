@@ -1,0 +1,26 @@
+
+*{-webkit-tap-highlight-color:rgba(150,150,200,.3);-ms-tap-highlight-color:rgba(150,150,200,.3);tap-highlight-color:rgba(150,150,200,.3);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding: 0;margin: 0;}
+html{ font-size:62.5%;width:100%;-webkit-font-smoothing:antialiased;max-width: 768px;margin: 0 auto;}
+body{ font-family:Helvetica Neue,Helvetica,Arial; color: $black; line-height:1; background:#FFFFFF;position: relative;font-size: $font_base;}
+input,textarea,select{ outline:none; resize:none; border: none;-webkit-appearance: none;color: $black;font-family:Helvetica Neue,Helvetica,Arial;font-size: $font_base;background-color: #FFFFFF;border-radius: 0;}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {background-color: #FFFFFF !important;}
+button:active{outline: none;}
+table { border-collapse:collapse;border-spacing:0;}
+th{ text-align:left;}
+img{vertical-align: middle;}
+ul{list-style: none;}
+a{ text-decoration:none;color: $black;cursor: pointer;}
+a:hover,a:active,a:link{text-decoration: none;}
+
+@media only screen and (min-width: 325px) {
+    html {font-size: 50% !important;}
+}
+@media only screen and (min-width: 375px) {
+    html {font-size: 75% !important;}
+}
+@media only screen and (min-width: 560px) {
+    html {font-size: 87.5% !important;}
+}
+@media only screen and (min-width: 640px) {
+    html {font-size: 100% !important;}
+}

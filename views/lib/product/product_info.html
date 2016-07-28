@@ -1,0 +1,18 @@
+<div class="product_text">
+    <h3 class="title">{{pro.productInfo.title}}</h3>
+    <div class="sec_pri clearfix">
+        <strong class="current_price">US&#36;{{pro.productInfo.currentPrice}}</strong>
+        <strike class="old_price">US&#36;{{pro.productInfo.oldPrice}}</strike>
+        <span>{{pro.productInfo.discount}}%off</span>
+    </div>
+    <div class="pro_review">
+    	<span class="ic_smallstar">
+    		<i><i style="width: {{pro.productInfo.reviewPercent}};"></i></i>
+    		<em>({{pro.productInfo.reviewCount}} Reviews)</em>
+    	</span>
+    </div>
+    <span class="absolute_right wish_label">
+    	<i class="icon icon_wish_gray"></i>
+    	<small>{{pro.productInfo.wishCount}}</small>
+    </span>
+</div>

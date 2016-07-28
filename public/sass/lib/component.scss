@@ -1,0 +1,232 @@
+
+.header{
+    width: 100%;
+    max-width: 768px;
+    height: $size_lg;
+    border-bottom: 1px solid $border;
+    background-color: #FFFFFF;
+    @extend .fixed_top;
+    z-index: $zindex_head;
+    nav{
+        display: block;
+        position: relative;
+        a.nav_item{
+            width: $size_lg;
+            height: $size_lg;
+            padding: .3rem;
+            position: absolute;
+            top: 0;
+            transition: all .3s ease-in;
+        }
+        .nav_item_1{
+            left: 0;
+            .icon_menu{
+                @extend .transition;
+            }
+        }
+        .nav_item_1.active{
+            background-color: $border;
+            .icon_menu{
+                //@extend .rotate_right;
+            }
+        }
+        .nav_item_2{
+            left: $size_lg;
+        }
+        .nav_item_3{
+            right: $size_lg;
+        }
+        .nav_item_4{
+            right: 0;
+        }
+        a.logo{
+            width: 10.0rem;
+            height: $size_lg;
+            display: block;
+            background: url(../images/logo.png) no-repeat center center;
+            background-size: 6.429rem $size_sm;
+            margin: 0 auto;
+        }
+        a.title{
+            height: $size_lg;
+            line-height: $size_lg;
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        .nav_item.nav_item_right{
+            width: 8.0rem;
+            right: 0;
+            font-size: 1.4rem;
+            line-height: $size_lg;
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0;
+            padding-right: .8rem;
+        }
+    }
+}
+
+.collection_view {
+    ul {
+        @extend .clearfix;
+        padding: .3rem;
+        li {
+            position: relative;
+            float: left;
+            padding: .3rem;
+            .wish_label{
+                top: auto;
+                bottom: 5px;
+                right: 0;
+                width: $size_md;
+                display: block;
+                i.icon_wish_empty {
+                   display: block;
+                }
+                small{
+                    display: block;
+                    margin-top: -0.9rem;
+                    font-size: 1.0rem;
+                    text-align: center;
+                    line-height: 1.4rem;
+                    color: #666;
+                }
+            }
+
+            span.discount_label{
+                color: #fff;
+                background-color: rgba(0, 0, 0, .6);
+                position: absolute;
+                left: -1.9rem;
+                top: .8rem;
+                display: inline-block;
+                padding: 0 1.5rem;
+                line-height: 1.2rem;
+                height:1.2rem;
+                z-index: 20;
+                font-size: 10px;
+                @include set_tranform(rotate(-45deg));
+                // font-family:'San Francisco';
+            }
+
+            a {
+                box-shadow: 0 2px 5px #CCCCCC;
+                position: relative;
+                display: block;
+                background: #FFFFFF;
+                overflow: hidden;
+                width: 100%;
+                .img_box {
+                    margin: 0 auto;
+                    overflow: hidden;
+                    width: 100%;
+                    background: url("../images/load.gif") no-repeat center center;
+                    min-height: 8.0rem;
+                    background-size: 16px;
+                    display: block;
+                    padding-top: 150%;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        z-index: 19;
+                    }
+                }
+                .item_text {
+                    background-color: $light;
+                    padding: .3rem 0 .2rem;
+                    strike {
+                        font-size: 1.0rem;
+                        color: #999;
+                        line-height: 1.4rem;
+                        margin: 0 .3rem;
+                    }
+                    strong {
+                        line-height: 1.4rem;
+                        font-weight: normal;
+                        display: block;
+                        max-width: 75%;
+                        color: $theme;
+                        margin: 0 .3rem;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.list_group{
+    background: #FFFFFF;
+    .list_group_item{
+        padding: 0;
+        line-height: $size_md;
+        border-bottom: 1px solid $border;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        &>strong{
+            display: block;
+            padding: 0 $margin*0.5;
+            font-weight: normal;
+        }
+        span,b{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        b{
+            font-weight: normal;
+            padding: 0 $margin_sm * 0.5;
+        }
+        &:last-child{
+            border-bottom:none;
+        }
+    }
+    .group_top{
+        position: relative;
+        cursor: pointer;
+        .icon_com_chevron{
+            @extend .transition;
+        }
+        strong{
+            font-weight: normal;
+        }
+    }
+    .inner_group{
+        display: none;
+        border-top:1px solid #dddddd;
+    }
+}
+.loading_view{
+  width: 100%;
+  height: 100%;
+  @include set_fixed(center);
+  background: rgba(255,255,255,.1);
+  z-index: 999;
+}
+
+.loading_section{
+    width: 8.0rem;
+    height: 8.0rem;
+    @include set_fixed(center);
+    background-color: rgba(0,0,0,.7);
+    /* display: flex;
+    align-items: center; */
+    border-radius: .5rem;
+    display: table;
+    i{
+        width: 32px;
+        height: 32px;
+        background: url(../images/loading_white.png) no-repeat center center;
+        background-size: 32px;
+        animation: loaddings 1.2s linear infinite;
+        -webkit-animation: loaddings 1.2s linear infinite;
+        margin: 0 auto;
+        display: table-cell;
+    }
+  }

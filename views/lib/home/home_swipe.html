@@ -1,0 +1,12 @@
+<div class="swiper-container home_swipe">
+  	<ul class="swiper-wrapper">
+  	{% for item in home.homeSwipe %}
+		<li class="swiper-slide">
+			<a href="{{item.href}}">
+				<img data-src="{{item.img}}" class="swiper-lazy">
+			</a>
+		</li>
+  	{% endfor %}
+	</ul>
+	<div class="swiper-pagination"></div>
+</div>

@@ -1,0 +1,75 @@
+<div class="product_size">
+    {% if pro.productColor %}
+    <dl class="dl_color">
+        <dt>COLOR:</dt>
+        <dd>
+            <div class="select_box">
+                <select class="field_default color">
+                    <option value="">COLOR</option>
+                    {% for item in pro.productColor.color %}
+                        <option value="{{item.value}}" selected="{% if productColor.current == item.text %}selected{% endif %}">{{item.text}}</option>
+                    {% endfor %}
+                </select>
+                <i class="arrow_down absolute_right"></i>
+            </div>
+        </dd>
+    </dl>
+    {% endif %}
+
+    {% if pro.productSize %}
+    <dl class="dl_size">
+        <dt>SIZE:</dt>
+        <dd>
+            <div class="select_box">
+                <select class="field_default color">
+                    <option value="">SIZE</option>
+                    {% for item in pro.productSize.size %}
+                    <option value="{{item.value}}" selected="{% if productSize.current == item.text %}selected{% endif %}">{{item.text}}</option>
+                    {% endfor %}
+                </select>
+                <i class="arrow_down absolute_right"></i>
+            </div>
+        </dd>
+    </dl>
+    {% endif %}
+    <dl class="dl_qty">
+        <dt>QTY:</dt>
+        <dd>
+            <span class="unavailable"><i class="icon icon_minus"></i></span>
+            <input type="number" data_max="{% if maxQty %}{{pro.maxQty}}{% endif %}" value="1">
+            <span><i class="icon icon_plus"></i></span>
+        </dd>
+    </dl>
+</div>
+<div class="product_option">
+    <div class="op_btns clearfixed">
+        <a class="btn_lg btn_theme btn_block add_bag_btn">ADD TO BAG</a>
+        <a class="btn_lg btn_light btn_block add_wish_btn">ADD TO WISH</a>
+    </div>
+    <div class="op_share">
+        <dl class="clearfix">
+            <dt>Share :</dt>
+            <dd>
+                <ul>
+                {# {% for item in pro.productShare %}
+                    <li class="i_fb">
+                        <a href="{{item}}"></a>
+                    </li>
+                {% endfor %} #}
+                    <li class="i_fb">
+                        <a href=""></a>
+                    </li>
+                    <li class="i_tw">
+                        <a href=""></a>
+                    </li>
+                    <li class="i_pt">
+                        <a href=""></a>
+                    </li>
+                    <li class="i_tb">
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
